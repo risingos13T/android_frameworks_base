@@ -157,7 +157,7 @@ public class NotificationConversationInfo extends LinearLayout implements
         // If the user selected Priority and the previous selection was not priority, show a
         // People Tile add request.
         if (mSelectedAction == ACTION_FAVORITE && getPriority() != mSelectedAction) {
-            mShadeController.animateCollapsePanels();
+            mShadeController.animateCollapseShade();
             if (mUm.isSameProfileGroup(UserHandle.USER_SYSTEM, mSbn.getNormalizedUserId())) {
                 mPeopleSpaceWidgetManager.requestPinAppWidget(mShortcutInfo, new Bundle());
             }

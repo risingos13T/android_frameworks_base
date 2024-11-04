@@ -1173,6 +1173,7 @@ public class NotificationConversationInfoTest extends SysuiTestCase {
         mNotificationInfo.bindNotification(
                 mShortcutManager,
                 mMockPackageManager,
+                mUserManager,
                 mPeopleSpaceWidgetManager,
                 mMockINotificationManager,
                 mOnUserInteractionCallback,
