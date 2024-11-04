@@ -63,8 +63,11 @@ class QQSGestureListener @Inject constructor(
 
     init {
         val tunable = Tunable { key: String?, value: String? ->
-            if (key == DOUBLE_TAP_SLEEP_GESTURE) {
-                doubleTapToSleepEnabled = TunerService.parseIntegerSwitch(value, true)
+            when (key) {
+                DOUBLE_TAP_SLEEP_GESTURE ->
+                    doubleTapToSleepEnabled = TunerService.parseIntegerSwitch(value,
+                            resources.getBoolean(org.lineageos.platform.internal.R.bool.
+                                    config_dt2sGestureEnabledByDefault))
             }
         }
         tunerService.addTunable(tunable, DOUBLE_TAP_SLEEP_GESTURE)
